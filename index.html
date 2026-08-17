@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tivisha Home Bakers - Fresh homemade cakes, cupcakes, cookies and custom bakes.">
+  <title>Tivisha Home Bakers | Freshly Baked With Love</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+    :root{--cream:#fff9f3;--pink:#d95f76;--rose:#b94760;--brown:#4a2b2c;--muted:#806c6d;--white:#fff;--line:#eadbd5;--shadow:0 16px 45px rgba(74,43,44,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--brown);font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+    .header{position:sticky;top:0;z-index:20;background:rgba(255,249,243,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Playfair Display";font-size:20px;display:flex;align-items:center;gap:8px}.brand-icon{font-family:initial}nav{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:600}nav a:hover{color:var(--rose)}.cart-btn{border:0;background:var(--brown);color:white;padding:11px 16px;border-radius:999px;font-weight:700;cursor:pointer}.cart-btn span{background:#fff;color:var(--brown);border-radius:50%;padding:2px 6px;margin-left:3px}.menu-btn{display:none;border:0;background:none;font-size:25px}
+    .hero{min-height:600px;position:relative;display:flex;align-items:center;background:linear-gradient(90deg,rgba(62,31,32,.75),rgba(62,31,32,.20)),url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1800&q=85") center/cover}.hero-content{position:relative;color:#fff;padding:80px 0;max-width:720px;margin-left:max(4%,calc((100% - 1120px)/2))}.pill{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:9px 15px;border-radius:99px;font-size:13px;margin-bottom:20px}.hero h1{font:700 clamp(44px,7vw,76px)/1.03 "Playfair Display";margin:0 0 20px}.hero h1 em{color:#ffd0d7;font-style:normal}.hero p{font-size:18px;line-height:1.7;max-width:600px;color:#fff5f2}.hero-actions{display:flex;gap:12px;margin:28px 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:12px;padding:14px 21px;font-weight:700;cursor:pointer;font-size:15px}.primary{background:var(--rose);color:white;box-shadow:0 10px 25px rgba(185,71,96,.22)}.light{background:white;color:var(--brown)}.hero-trust{display:flex;gap:25px;font-size:13px;opacity:.9}.features{background:#fff;border-bottom:1px solid var(--line)}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:24px 0;gap:18px}.feature-grid>div{display:flex;align-items:center;gap:12px}.feature-grid span{font-size:28px}.feature-grid b,.feature-grid small{display:block}.feature-grid small{color:var(--muted);font-size:12px;margin-top:3px}
+    .section{padding:90px 0}.section-head{text-align:center;width:min(720px,92%);margin:0 auto 40px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;color:var(--rose)}h2{font:700 42px/1.15 "Playfair Display";margin:10px 0 12px}.section-head p,.about p,.custom-grid p,.contact-grid p{color:var(--muted);line-height:1.7}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 25px rgba(74,43,44,.04);transition:.2s}.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.product-img{height:220px;background-size:cover;background-position:center}.product-body{padding:20px}.product-body h3{margin:0 0 6px;font-family:"Playfair Display";font-size:22px}.product-body p{color:var(--muted);font-size:13px;min-height:38px}.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:16px}.price{font-weight:800;font-size:18px}.add{background:#f8e9e8;border:0;color:var(--rose);padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+    .custom-section{background:#f3e2de;padding:80px 0}.custom-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.custom-card{background:white;border-radius:25px;padding:35px;display:flex;align-items:center;gap:25px;box-shadow:var(--shadow)}.cake-art{font-size:100px}.custom-card p{margin:5px 0;color:var(--muted);line-height:1.5}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.about-card{background:#f4e7e1;border-radius:25px;text-align:center;padding:55px 30px}.about-card>span{font-size:70px}.about-card h3{font:700 25px "Playfair Display"}.about-card p{color:var(--muted);line-height:1.6}.mini-stats{display:flex;gap:35px;margin-top:25px}.mini-stats b,.mini-stats small{display:block}.mini-stats b{font-size:24px;color:var(--rose)}.mini-stats small{color:var(--muted)}
+    .contact-section{background:var(--brown);color:white;padding:70px 0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.contact-grid p{color:#e8d7d3}.contact-card{background:#fff;color:var(--brown);border-radius:18px;padding:8px}.contact-card a{display:flex;align-items:center;gap:14px;padding:16px;border-bottom:1px solid var(--line)}.contact-card a:last-child{border:0}.contact-card a>span{display:flex;flex-direction:column}.contact-card small{color:var(--muted);margin-top:2px}
+    footer{padding:35px 0;background:#321d1e;color:#eadbd5}.footer-inner{text-align:center}.footer-inner p{font-size:13px;color:#bda8a5}.footer-inner small{font-size:11px;color:#8f7977}
+    .modal{position:fixed;inset:0;background:rgba(30,15,16,.58);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}.modal.show{display:flex}.modal-box{position:relative;background:#fff9f3;width:min(520px,100%);max-height:90vh;overflow:auto;border-radius:20px;padding:30px;box-shadow:0 30px 90px rgba(0,0,0,.25)}.modal-box.wide{width:min(720px,100%)}.close{position:absolute;right:15px;top:12px;border:0;background:#f0e1dc;border-radius:50%;width:34px;height:34px;font-size:23px;cursor:pointer}.modal-box h2{font-size:32px;margin-top:5px}.cart-line{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:13px 0}.cart-line small{color:var(--muted)}.qty button{border:0;background:#f0e1dc;border-radius:6px;width:27px;height:27px;cursor:pointer}.qty span{padding:0 8px}.cart-total{display:flex;justify-content:space-between;font-size:20px;padding:18px 0}.full{width:100%}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{display:block;font-size:13px;font-weight:700;margin:12px 0}input,textarea{width:100%;margin-top:7px;border:1px solid var(--line);border-radius:10px;background:white;padding:12px;font:inherit;color:var(--brown)}textarea{min-height:85px;resize:vertical}.checkout-summary{background:#f5e9e5;padding:15px;border-radius:12px;margin:18px 0;font-size:13px;line-height:1.7}.secure-note{font-size:11px;color:var(--muted);text-align:center;line-height:1.5}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:var(--brown);color:white;padding:13px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:100;font-size:13px}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:800px){nav{display:none;position:absolute;top:74px;left:0;right:0;background:#fff9f3;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}nav.open{display:flex}.menu-btn{display:block}.feature-grid,.product-grid{grid-template-columns:1fr 1fr}.custom-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.hero{min-height:620px}.hero-content{margin-left:4%;margin-right:4%}h2{font-size:35px}}
+    @media(max-width:520px){.feature-grid,.product-grid,.form-grid{grid-template-columns:1fr}.hero-actions{flex-direction:column;align-items:flex-start}.hero-trust{gap:10px;flex-wrap:wrap}.section{padding:65px 0}.product-img{height:210px}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home"><span class="brand-icon"><img src="https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Logo.jpg" alt="Thumbnail" style="width: 0.75in; height: 0.75in; object-fit: cover;"></span><span><b>Tivisha Home Bakers</b></span></a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <nav id="navMenu">
+        <a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#custom">Custom Cakes</a>
+        <a href="#about">About</a><a href="#contact">Contact</a>
+        <button class="cart-btn" id="cartOpen">🛒 Cart <span id="cartCount">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="pill">✨ Fresh • Homemade • Made With Love</div>
+        <h1>Sweet moments,<br><em>beautifully baked.</em></h1>
+        <p>Delicious cakes, cupcakes, cookies and custom bakes made specially for your celebrations.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#menu">Order Now <span>→</span></a>
+          <a class="btn light" href="#custom">🎂 Custom Cake</a>
+        </div>
+        <div class="hero-trust"><span>⭐ 5.0</span><span>❤️ Made Fresh</span><span>🏠 Home Bakery</span></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container feature-grid">
+        <div><span>🥚</span><div><b>Eggless Ingredients</b><small>Quality ingredients in every bake</small></div></div>
+        <div><span>🎨</span><div><b>Custom Designs</b><small>Made to match your celebration</small></div></div>
+        <div><span>🚚</span><div><b>Easy Ordering</b><small>Quick order confirmation</small></div></div>
+        <div><span>💝</span><div><b>Baked With Love</b><small>Homemade taste in every bite</small></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-head"><span class="eyebrow">OUR MENU</span><h2>Something sweet for every occasion</h2><p>Choose your favourite and add it to your cart.</p></div>
+      <div class="container product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="custom-section" id="custom">
+      <div class="container custom-grid">
+        <div><span class="eyebrow">YOUR VISION, OUR BAKE</span><h2>Dream cake? Let's make it real. 🎂</h2>
+          <p>Tell us your theme, flavour, size and occasion. We'll create a cake that's as special as your celebration.</p>
+          <button class="btn primary" id="customBtn">Request Custom Cake →</button>
+        </div>
+        <div class="custom-card"><div class="cake-art">🎂</div><div><b>Personalised Cakes</b><p>Birthdays • Anniversaries • Kids • Wedding • Theme Cakes</p></div></div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-card"><span>🧁</span><h3>Homemade goodness</h3><p>Every order is freshly prepared with care, attention and a whole lot of love.</p></div>
+        <div><span class="eyebrow">ABOUT TIVISHA</span><h2>Baked for your happiest moments.</h2>
+          <p>At Tivisha Home Bakers, we believe every celebration deserves something delicious. From a simple cupcake to a show-stopping custom cake, we make each order fresh and personal.</p>
+          <div class="mini-stats"><div><b>100%</b><small>Freshly Made</small></div><div><b>♥</b><small>Homemade</small></div><div><b>∞</b><small>Custom Ideas</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div><span class="eyebrow">GET IN TOUCH</span><h2>Ready to make your celebration sweeter?</h2><p>Place your order online or contact us directly for custom requirements.</p></div>
+        <div class="contact-card">
+          <a href="tel:+919170406769">📞 <span><b>Call Us</b><small>+91 91704 06769</small></span></a>
+          <a href="https://wa.me/919170406769" target="_blank">💬 <span><b>WhatsApp</b><small>Chat with us</small></span></a>
+          <a href="mailto:tivishahomebakers@gmail.com">✉️ <span><b>Email</b><small>tivishahomebakers@gmail.com</small></span></a>
+          <a href="https://maps.app.goo.gl/oCXW5Dr7NvLKVpzL6">🌐 <span><b>Location [Map]</b><small>H.No. 11 Maswanpur, Kanpur</small></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div class="brand">🧁 Tivisha <b>Home Bakers</b></div><p>Freshly baked. Beautifully made. Made with love. ❤️</p><small>© <span id="year"></span> Tivisha Home Bakers</small></div></footer>
+
+  <div class="modal" id="cartModal"><div class="modal-box"><button class="close" data-close>×</button><h2>Your Order</h2><div id="cartItems"></div><div class="cart-total"><span>Total</span><b id="cartTotal">₹0</b></div><button class="btn primary full" id="checkoutBtn">Proceed to Checkout →</button></div></div>
+
+  <div class="modal" id="orderModal"><div class="modal-box wide"><button class="close" data-close>×</button><span class="eyebrow">CHECKOUT</span><h2>Complete your order</h2>
+    <form id="orderForm">
+      <div class="form-grid">
+        <label>Full Name*<input name="name" required placeholder="Your name"></label>
+        <label>Mobile Number*<input name="phone" required type="tel" placeholder="10-digit mobile number"></label>
+        <label>Delivery Date*<input name="date" required type="date"></label>
+        <label>Preferred Time*<input name="time" required type="time"></label>
+      </div>
+      <label>Delivery Address*<textarea name="address" required placeholder="Full delivery address"></textarea></label>
+      <label>Order Notes<textarea name="notes" placeholder="Cake message, theme, special instructions..."></textarea></label>
+      <div class="checkout-summary" id="checkoutSummary"></div>
+      <button class="btn primary full" type="submit">Place Order & Send Details</button>
+      <p class="secure-note">Your order details will be prepared for WhatsApp and SMS. For automatic SMS delivery, connect an SMS provider/backend as described in README.</p>
+    </form>
+  </div></div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const CONFIG = {
+      whatsappNumber: "919170406769", // Replace with your business WhatsApp number, country code included.
+      smsNumber: "9170406769",         // Replace with your business mobile number.
+      currency: "₹"
+    };
+
+    const products = [
+      {id:1,name:"Chocolate Cake",price:449,desc:"A timeless, rich chocolate sponge layered with smooth chocolate frosting.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Chocolate.jpeg"},
+      {id:2,name:"Pineapple Cake",price:349,desc:"Light vanilla sponge layered with whipped cream and juicy pineapple chunks.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Pineapple.jpeg"},   
+      {id:3,name:"KitKat Cake",price:549,desc:"A chocolate lover's delight surrounded by crispy KitKat bars and topped with gems.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/KitKat.jpeg"},
+      {id:4,name:"Black Forest Cake",price:399,desc:"Classic chocolate layers loaded with whipped cream, cherries, and dark chocolate shavings.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Black%20Forest.jpeg"},
+      {id:5,name:"Vanilla Cake",price:399,desc:"Soft and fluffy sponge infused with aromatic vanilla bean flavor and fresh cream.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Vanilla.jpeg"},
+      {id:6,name:"White Forest Cake",price:399,desc:"Vanilla sponge layered with sweet white chocolate cream and tart cherries.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/White%20Forest.jpeg"},
+      {id:7,name:"Butterscotch Cake",price:449,desc:"Moist vanilla cake layered with butterscotch cream and crunchy praline nuts.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Butterscotch.jpeg"},
+      {id:8,name:"Cassata Cake",price:599,desc:"Vibrant sponge layers filled with mixed fruit compote, nuts, and creamy frosting.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Casata.png"},
+      {id:9,name:"Strawberry Cake",price:449,desc:"Delicate sponge infused with sweet strawberry glaze and airy whipped cream.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Strawberry.jpeg"},
+      {id:10,name:"Swiss Truffle Cake",price:449,desc:"Silky, melt-in-mouth Swiss chocolate ganache layered over a dense chocolate sponge.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Swiss%20Truffle.png"},
+      {id:11,name:"Chocolate Truffle Cake",price:599,desc:"Ultra-rich dark chocolate sponge coated in a glossy, decadent ganache.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Chocolate%20Tuffle.png"},
+      {id:12,name:"Oreo Black Cake",price:449,desc:"Rich dark cocoa sponge topped with crushed Oreo cookies and creamy ganache.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Black%20Oreo.png"},
+      {id:13,name:"Red Velvet Cake",price:449,desc:"Soft crimson sponge with a hint of cocoa, layered with tangy cream cheese frosting.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Red%20Velvet.jpg"},
+      {id:14,name:"Rainbow Cake",price:499,desc:"Eye-catching multi-colored sponge layers stacked with smooth vanilla buttercream.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Rainbow.png"},
+      {id:15,name:"Fresh Fruit Cake",price:599,desc:"Light vanilla sponge covered in whipped cream and topped with seasonal sliced fruits.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Fresh%20Fruit.png"},
+      {id:16,name:"Oreo Cake",price:549,desc:"Cookies-and-cream infused sponge filled with crushed Oreos and vanilla cream.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Oreo.jpeg"},
+      {id:17,name:"Plum Cake",price:549,desc:"Traditional spiced fruit cake packed with soaked dry fruits, raisins, and aromatic spices.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Plum.jpeg"},
+      {id:18,name:"Rashmali Cake",price:599,desc:"Cardamom-infused sponge soaked in rich saffron milk and topped with soft rasmalai and pistachios.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Rashmali.jpeg"},
+      {id:19,name:"Bento Cake",price:249,desc:"Adorable, personal-sized mini cake with custom minimalist frosting designs.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Bento.jpeg"},
+      {id:20,name:"Pineapple Pastry",price:49,desc:"A single-serving slice of moist sponge, fresh cream, and tangy pineapple bits.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Pineapple%20P.jpeg"},
+      {id:21,name:"Chocolate Pastry",price:69,desc:"A decadent single-serve chocolate slice layered with rich ganache.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Chocolate%20P.jpeg"},
+      {id:22,name:"Vanilla Pastry",price:49,desc:"A classic light and fluffy pastry slice frosted with smooth vanilla cream.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Vanilla%20P.jpeg"},
+      {id:23,name:"Butterscotch Pastry",price:59,desc:"Sweet pastry slice layered with creamy frosting and crunchy caramel crunch.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Butterscotch%20P.jpeg"},
+      {id:24,name:"Brownie",price:69,desc:"Fudgy, dense chocolate square with a crackly top and chewy center.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Brownie.jpeg"},
+      {id:25,name:"Cupcakes",price:59,desc:"Moist mini cakes topped with swirls of flavorful buttercream or frosting.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Cupcakes.jpeg"},
+      {id:26,name:"Muffins",price:49,desc:"Soft, bakery-style breakfast bakes with a golden crumb and tender center.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Muffins.jpeg"},
+      {id:27,name:"Chocolate Cookies",price:15,desc:"Crunchy, rich cocoa cookies loaded with chocolate chips.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Chocolate%20Cookies.jpeg"},
+      {id:28,name:"Nankhatai Cookies",price:15,desc:"Traditional Indian shortbread cookies baked with cardamom and a melt-in-mouth texture.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Nankhati.jpeg"},
+      {id:29,name:"Chocolate [Dark/White]",price:99,desc:"Rich chocolate spongy and creamy chocolate ",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Chocolate%20DW.jpeg"},
+      {id:30,name:"Custom Cake",price:799,desc:"Personalised cake for any special occasion like Birthday, Anniversary, Kids, Wedding, Theme Cakes.",img:"https://6a81b1fa7cad5075a99df601.imgix.net/sandbox/Custom.jpeg"}
+    ];
+
+    let cart = JSON.parse(localStorage.getItem("tivishaCart") || "[]");
+    const $ = s => document.querySelector(s);
+
+    function money(n){ return CONFIG.currency + n.toLocaleString("en-IN"); }
+    function save(){localStorage.setItem("tivishaCart",JSON.stringify(cart)); renderCart(); updateCount();}
+    function updateCount(){$("#cartCount").textContent=cart.reduce((a,i)=>a+i.qty,0);}
+    function showToast(t){const x=$("#toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2500)}
+
+    function renderProducts(){
+      $("#productGrid").innerHTML=products.map(p=>`
+        <article class="product">
+          <div class="product-img" style="background-image:url('${p.img}')"></div>
+          <div class="product-body"><h3>${p.name}</h3><p>${p.desc}</p>
+          <div class="price-row"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">+ Add</button></div></div>
+        </article>`).join("");
+    }
+    function addToCart(id){
+      const p=products.find(x=>x.id===id), item=cart.find(x=>x.id===id);
+      if(item)item.qty++; else cart.push({...p,qty:1});
+      save(); showToast(`${p.name} added to cart`);
+    }
+    function changeQty(id,d){
+      const item=cart.find(x=>x.id===id); if(!item)return;
+      item.qty+=d;if(item.qty<=0)cart=cart.filter(x=>x.id!==id);save();
+    }
+    function renderCart(){
+      const el=$("#cartItems");
+      if(!cart.length){el.innerHTML="<p>Your cart is empty. Add something delicious! 🧁</p>";$("#cartTotal").textContent=money(0);return}
+      el.innerHTML=cart.map(i=>`<div class="cart-line"><div><b>${i.name}</b><br><small>${money(i.price)} × ${i.qty}</small></div><div class="qty"><button onclick="changeQty(${i.id},-1)">−</button><span>${i.qty}</span><button onclick="changeQty(${i.id},1)">+</button></div></div>`).join("");
+      $("#cartTotal").textContent=money(cart.reduce((a,i)=>a+i.price*i.qty,0));
+    }
+    function openModal(id){$(id).classList.add("show")}
+    function closeModal(el){el.classList.remove("show")}
+
+    function checkoutSummary(){
+      $("#checkoutSummary").innerHTML="<b>Order summary</b><br>"+cart.map(i=>`${i.name} × ${i.qty} — ${money(i.price*i.qty)}`).join("<br>")+"<hr><b>Total: "+money(cart.reduce((a,i)=>a+i.price*i.qty,0))+"</b>";
+    }
+    function makeOrderText(data){
+      const total=cart.reduce((a,i)=>a+i.price*i.qty,0);
+      return `NEW ORDER - Tivisha Home Bakers%0A%0AName: ${encodeURIComponent(data.name)}%0AMobile: ${encodeURIComponent(data.phone)}%0ADate: ${encodeURIComponent(data.date)}%0ATime: ${encodeURIComponent(data.time)}%0AAddress: ${encodeURIComponent(data.address)}%0ANotes: ${encodeURIComponent(data.notes||"None")}%0A%0AItems:%0A${cart.map(i=>encodeURIComponent(i.name)+" x "+i.qty+" = "+money(i.price*i.qty)).join("%0A")}%0A%0ATotal: ${money(total)}`;
+    }
+
+    $("#cartOpen").onclick=()=>{renderCart();openModal("#cartModal")};
+    $("#checkoutBtn").onclick=()=>{if(!cart.length){showToast("Please add an item first.");return}closeModal($("#cartModal"));checkoutSummary();openModal("#orderModal")};
+    $("#customBtn").onclick=()=>{cart=[];save();$("#orderForm").reset();$("#checkoutSummary").innerHTML="<b>Custom Cake Request</b><br>Please add your theme, flavour, size and budget in Order Notes.";openModal("#orderModal")};
+    document.querySelectorAll("[data-close]").forEach(b=>b.onclick=()=>closeModal(b.closest(".modal")));
+    document.querySelectorAll(".modal").forEach(m=>m.onclick=e=>{if(e.target===m)closeModal(m)});
+    $("#menuBtn").onclick=()=>$("#navMenu").classList.toggle("open");
+    document.querySelectorAll("#navMenu a").forEach(a=>a.onclick=()=>$("#navMenu").classList.remove("open"));
+    $("#year").textContent=new Date().getFullYear();
+
+    $("#orderForm").addEventListener("submit",e=>{
+      e.preventDefault();
+      const data=Object.fromEntries(new FormData(e.target).entries());
+      if(!/^[0-9]{10}$/.test(data.phone.replace(/\D/g,""))){showToast("Please enter a valid 10-digit mobile number.");return}
+      if(!cart.length){showToast("Please add an item or describe your custom cake.");return}
+      const text=makeOrderText(data);
+      window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${text}`,"_blank");
+      setTimeout(()=>{window.location.href=`sms:${CONFIG.smsNumber}?body=${text}`},500);
+      showToast("Order prepared for WhatsApp & SMS!");
+      localStorage.removeItem("tivishaCart");cart=[];updateCount();
+    });
+
+    renderProducts();renderCart();updateCount();
+  </script>
+</body>
+</html>
